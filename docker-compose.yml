@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:13.1
+    working_dir: /application
+    volumes:
+      - .:/application
+    environment:
+      - POSTGRES_DB=api_development
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - "5149:5432"
